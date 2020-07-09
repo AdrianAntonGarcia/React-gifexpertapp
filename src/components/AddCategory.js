@@ -11,7 +11,7 @@ const AddCategory = ({ setCategories }) => {
 	 */
 
 	const handleInputChange = (e) => {
-		// console.log(e.target.value);
+		// console.log("handleInputChange");
 		setInputValue(e.target.value);
 	};
 
@@ -23,7 +23,7 @@ const AddCategory = ({ setCategories }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
+		// console.log("handleSubmit");
 		if (inputValue.trim().length > 2) {
 			// console.log(e.target.inputValue.value);
 			setCategories((state) => {
@@ -36,6 +36,7 @@ const AddCategory = ({ setCategories }) => {
 
 	return (
 		<form onSubmit={handleSubmit}>
+			<p>{inputValue}</p>
 			<input
 				name="inputValue"
 				type="text"
